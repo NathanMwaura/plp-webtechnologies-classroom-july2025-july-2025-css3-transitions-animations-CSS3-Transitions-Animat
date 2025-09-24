@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Animation Playground</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Interactive Animation Playground</h1>
+        
+        <!-- PART 1: CSS3 Transitions and Animations -->
+        <section class="section">
+            <h2>Part 1: CSS3 Transitions & Animations</h2>
+            <p>Hover over this section to see CSS transitions in action! The title above uses keyframe animations for continuous effects.</p>
+            
+            <div class="card-container">
+                <div class="card" onclick="flipCard(this)">
+                    <h3>Hover & Click Me!</h3>
+                    <p>I have smooth transitions and flip animations.</p>
+                </div>
+                <div class="card" onclick="flipCard(this)">
+                    <h3>Animated Cards</h3>
+                    <p>CSS transforms and transitions make me responsive.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- PART 2: JavaScript Functions -->
+        <section class="section">
+            <h2>Part 2: JavaScript Functions - Scope, Parameters & Return Values</h2>
+            <p>Interactive elements below demonstrate JavaScript functions with parameters and return values.</p>
+            
+            <div class="controls">
+                <button class="btn" onclick="handleButtonClick(this, 'bounce')">Bounce Animation</button>
+                <button class="btn" onclick="handleButtonClick(this, 'rotate')">Rotate Animation</button>
+                <button class="btn" onclick="handleButtonClick(this, 'shake')">Shake Animation</button>
+                <button class="btn" onclick="startProgressAnimation()">Start Progress</button>
+                <button class="btn" onclick="showModal()">Show Modal</button>
+            </div>
+            
+            <div class="animated-box" id="animatedBox"></div>
+            
+            <div class="counter">
+                Counter: <span id="counterValue">0</span>
+                <br>
+                <button class="btn" onclick="updateCounter(1)">Increment (+1)</button>
+                <button class="btn" onclick="updateCounter(-1)">Decrement (-1)</button>
+                <button class="btn" onclick="updateCounter(calculateRandomIncrement())">Random Increment</button>
+                <button class="btn" onclick="resetCounter()">Reset</button>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="spinner" id="loadingSpinner"></div>
+        </section>
+        
+        <!-- PART 3: Combining CSS Animations with JavaScript -->
+        <section class="section">
+            <h2>Part 3: CSS + JavaScript Integration</h2>
+            <p>Click buttons to see JavaScript dynamically trigger CSS animations!</p>
+            
+            <div class="controls">
+                <button class="btn" onclick="createParticles(this)">Create Particles ✨</button>
+                <button class="btn" onclick="toggleSpinner()">Toggle Loading</button>
+                <button class="btn" onclick="animateSection(this)">Animate Section</button>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Modal for demonstration -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideModal()">&times;</span>
+            <h3>🎉 Modal Animation Demo</h3>
+            <p>This modal slides up and fades in using CSS animations triggered by JavaScript!</p>
+            <button class="btn" onclick="hideModal()">Close Modal</button>
+        </div>
+    </div>
+</body>
+</html>
